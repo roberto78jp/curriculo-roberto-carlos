@@ -1,0 +1,330 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #101728;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #fff;  
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main {
+    margin: .5rem;
+    padding: .5rem;
+    border: 1px solid #9340ff;
+    border-radius: 1rem;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;  
+}
+
+.header .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 100px rgb(229, 21, 233, 0.7);
+    background: radial-gradient(circle, rgba(229, 21, 233, 1) 0%, rgba(229, 21, 233, 1) 50%, rgba(243, 80, 255, 0.8566614145658263) 100%);
+}
+
+.header .title h2 {
+    text-align: center;
+    font-size: .8rem;
+    padding-top: 1rem;
+}
+
+.header .title h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.information p {  
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    margin: .5rem;     
+}
+
+.information p::before {
+    content: '';
+    display: inline-block;    
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.information .job::before {
+    background-image: url('../img/icons/job.png');
+}
+
+.information .location::before {
+    background-image: url('../img/icons/localização.png');
+}
+
+.information .email::before {
+    background-image: url('../img/icons/email.png');
+  
+}
+
+.information .github::before {
+    background-image: url('../img/icons/github.png');
+
+}
+
+.information .linkedin::before {
+    background-image: url('../img/icons/linkedin.png');
+
+}
+
+.information .phone a:hover {
+    color: #9340ff;
+}
+
+.information .email a:hover {
+    color: #9340ff;
+}
+
+.information .github a:hover {
+    color: #9340ff;
+}
+
+.information .linkedin a:hover {
+    color: #9340ff;
+
+}
+
+/* ACORDEON */
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    margin: 1rem 0;
+    border: 1px solid #9340ff;
+    border-radius: 1rem;
+}
+
+.acordeon .trigger {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    padding: 1rem 1rem;
+    background-color: transparent;
+    color: #fff;    
+    border: none;
+    transition: 1s;
+}
+
+.acordeon .trigger:hover {
+    cursor: pointer;
+    color: #9340ff;
+}
+
+.acordeon .trigger::after {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-image: url('../img/icons/arrow-top.png');
+    transition: .25s;
+}
+
+.acordeon.open .trigger::after{
+    transform: rotate(180deg);
+}
+
+.acordeon .content {
+    overflow: hidden;    
+    height: 0;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+
+.acordeon.open .content {
+    display: block;
+    padding: 0 1rem 1rem 2rem;
+    height: auto;
+    opacity: 1;
+}
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .tools ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills .tools h2 {
+    font-size: 1.2rem; 
+    padding-top: 1rem; 
+}
+
+.skills .tools ul li img{
+    max-width: 50px;
+    padding: 0 .5rem ;
+}
+
+.skills .plus ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.skills .plus h2 {  
+    font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+.skills .plus ul li {
+    margin-left: 2rem;
+    padding: .5rem;
+}
+
+
+
+/* LINGUAGES */
+.linguages {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;   
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.linguages li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 2rem 1rem 0;
+}
+
+.linguages li::before {
+    content: '';
+    display: inline-block;    
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/icons/check.png');
+}
+
+
+/* FORMAÇÃO ACADÊMICA */
+.formacao {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.formacao li {
+    padding-top: 2rem;
+}
+
+.formacao .title {
+    font-size: 1.1rem;
+}
+
+.formacao li p {
+    color: #9340ff;
+}
+
+/* CURSOS */
+.cursos {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cursos li {
+    padding-top: 2rem;
+}
+
+.cursos .title {
+    font-size: 1.1rem;
+}
+
+.cursos li p2 {
+    color: #9340ff;
+}
+
+/* EXPERIÊNCIA PROFISSIONAL */
+.experiencia {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.experiencia .title {
+    font-size: 1.1rem;
+    padding: .5rem 0;
+}
+
+.experiencia li {
+    padding-top: 2rem;
+}
+
+.experiencia li p2 {
+    color: #9340ff;
+}
+
+
+
+/* FOOTER */
+
+.text-footer {
+    display: flex;
+    justify-content: center;
+    color: #9340ff;
+    font-weight: 300;
+    font-size: .8rem;
+}
